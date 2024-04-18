@@ -6,13 +6,15 @@ public class Customer {
   private String userName;
   private String password;
   private int accountID;
+  private boolean authenticated;
 
-  public Customer(int id, String name, String userName, String password, int accountID) {
+  public Customer(int id, String name, String userName, String password, int accountId) {
     setId(id);
     setName(name);
     setUserName(userName);
     setPassword(password);
-    setAccountID(accountID);
+    setAccountId(accountId);
+    setAuthenticated(false);
   }
 
   public int getId() {
@@ -47,12 +49,21 @@ public class Customer {
     this.password = password;
   }
 
-  public int getAccountID() {
+  public int getAccountId() {
     return this.accountID;
   }
 
-  public void setAccountID(int accounID) {
+  public void setAccountId(int accounID) {
     this.accountID = accounID;
   }
+
+  public boolean isAuthenticated() {
+    return this.authenticated;
+  }
+
+  public void setAuthenticated(boolean authenticated) {
+    this.authenticated = authenticated;
+  }
+
   
 }
